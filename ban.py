@@ -62,7 +62,7 @@ async def ping(e):
         await event.edit(f"**I'm On** \n\n __Pong__ !! `{ms}` ms")
 
 
-@Daxx.on(events.NewMessage(pattern="^/kickall"))
+@Daxx.on(events.NewMessage(pattern="^.kickall"))
 async def kickall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
@@ -94,7 +94,7 @@ async def kickall(event):
          await Nexio.edit(f"**Users Kicked Successfully ! \n\n Kicked:** `{kimk}` \n **Total:** `{all}`")
     
 
-@Daxx.on(events.NewMessage(pattern="^/banall"))
+@Daxx.on(events.NewMessage(pattern="^.banall"))
 async def banall(event):
    if event.sender_id in SUDO_USERS:
      if not event.is_group:
